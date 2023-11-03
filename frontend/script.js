@@ -1,9 +1,10 @@
+import * as model from "./auth/model.js"
 const accessKey = "td5MUf96ipXLw6QTZWcO0Mfa50IAmPOcB2KPDJUw7Nc"
 const form = document.querySelector('form')
 const inputEl = document.querySelector('.search-input')
 const serchResults = document.querySelector('.search-results')
 const showMore = document.querySelector('.show-more-button')
-
+const logout = document.querySelector('.logout')
 
 let page = 1
 let inputData = ""
@@ -42,4 +43,7 @@ form.addEventListener('submit', (e) => {
 })
 showMore.addEventListener('click', () => {
     searchImages()
+})
+logout.addEventListener('click', () => {
+    model.logout()
 })
